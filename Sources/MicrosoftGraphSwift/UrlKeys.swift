@@ -1,0 +1,37 @@
+public struct UrlKeys {
+    static let graphRoot = "https://graph.microsoft.com/v1.0/"
+    ///Objects
+    static let usersRoot = "users/"
+    static let groupsRoot = "groups/"
+    
+    static let memberOf = "/memberOf"
+    static let members = "members/"
+    static let getMemberGroups = "/getMemberGroups"
+    public static let odataType = "odataType"
+    ///Parameters for Select requests
+    static let select = "?$select="
+    public static let accountEnabled = "accountEnabled"
+    public static let birthday = "birthday"
+    public static let city = "city"
+    public static let companyName = "companyName"
+    public static let country = "country"
+    public static let department = "department"
+    public static let description = "description"
+    public static let displayName = "displayName"
+    public static let givenName = "givenName"
+    public static let hireDate = "hireDate"
+    public static let id = "id"
+    public static let jobTitle = "jobTitle"
+    public static let mail = "mail"
+    public static let mailNickname = "mailNickname"
+    public static let mobilePhone = "mobilePhone"
+    public static let postalCode = "postalCode"
+    public static let preferredName = "preferredName"
+    public static let schools = "schools"
+    public static let state = "state"
+    public static let streetAddress = "streetAddress"
+    public static let surName = "surName"
+    public static let userPrincipalName = "userPrincipalName"
+    public static let userType = "userType"
+}
+
