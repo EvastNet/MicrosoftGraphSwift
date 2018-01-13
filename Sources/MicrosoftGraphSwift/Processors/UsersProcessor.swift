@@ -54,8 +54,15 @@ public struct UsersProcessor: MicrosoftGraphProcessor{
     public func delete(){}
     ///Get the groups and directory roles that the user is a direct member of
     public func memberOf(){}
+    
     ///Check for membership in a list of groups
-    public func checkMemberGroups(){}
+    public func checkMemberGroups(id: String, groupIds: [String]) throws -> CheckMemberGroups{
+        
+        let entity = CheckMemberGroups(groupIds: groupIds)
+        
+        return try makeRequest([id, "checkMemberGroups"], method: .post, model: entity)
+    }
+    
     ///Return all the users that the specified user is a member of.
     public func getMemberGroups(){}
     ///Return all of the users that this user is a member of.
