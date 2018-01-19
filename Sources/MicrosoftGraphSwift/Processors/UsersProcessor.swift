@@ -43,7 +43,10 @@ public struct UsersProcessor: MicrosoftGraphProcessor{
         if let s = select{
             params["$select"] = makeSelectQuery(s)
         }
-        return try makeRequest(query: params)
+        //return try makeRequest(query: params)
+        
+        let response = try makeResponse(query: params)
+        return try processObjects(response: response, method: .get)
     }
     
     ///Update a user
