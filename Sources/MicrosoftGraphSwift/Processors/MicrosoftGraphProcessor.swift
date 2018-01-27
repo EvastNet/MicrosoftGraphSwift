@@ -116,7 +116,8 @@ extension MicrosoftGraphProcessor{
             }
             result = modelData
             
-        case .post:
+            
+        case .post, .delete:
             ///In post call, return the model back from the response data
             ///If response status has noContent to return, just return the passed in model
             if response.status == .noContent{

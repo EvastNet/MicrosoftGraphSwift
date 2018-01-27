@@ -73,7 +73,11 @@ public struct GroupsProcessor: MicrosoftGraphProcessor{
     }
     
     ///Remove a member from a group
-    public func removeMember(){}
+    public func removeMember(group: String, member: GroupMember) throws {
+        if let id = member.id {
+            _ = try makeRequest([group, "members/" + id + "/$ref"], method: .delete, model: member)
+        }
+    }
     ///Check for membership in the specified list of groups.
     ///Returns from the list those groups of which the specified group has a direct or transitive membership.
     public func checkMemberGroups(){}

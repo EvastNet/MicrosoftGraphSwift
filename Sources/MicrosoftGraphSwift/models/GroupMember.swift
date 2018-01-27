@@ -9,10 +9,10 @@ import Foundation
 
 //Member object for returning members
 public struct GroupMember: Codable{
-    public let id: String?
-    public let displayName: String?
-    public let odataType: String?
-    public let odataId: String?
+    public var id: String?
+    public var displayName: String?
+    public var odataType: String?
+    public var odataId: String?
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -22,7 +22,7 @@ public struct GroupMember: Codable{
     }
     
     public init(
-        id: String?,
+        id: String? = nil,
         displayName: String? = nil,
         odataType: String? = nil,
         odataId: String? = nil
